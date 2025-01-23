@@ -1,4 +1,4 @@
-module github.com/razonyang/hugo-theme-bootstrap-skeleton
+module github.com/Adarsh-Liju/portfolio
 
 go 1.18
 
