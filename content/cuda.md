@@ -12,7 +12,7 @@ In this presentation, we’ll compare **CPU** and **GPU** using **Iron Man** and
 
 ---
 
-# CPU (Iron Man)
+## CPU (Iron Man)
 
 - **Role**: Iron Man represents the **CPU** because he is highly skilled in thinking, strategizing, and making complex decisions.
 - **Capabilities**: Iron Man can do many different tasks (like controlling the Iron Man suit, designing technology, etc.), but he does them one at a time.
@@ -20,14 +20,14 @@ In this presentation, we’ll compare **CPU** and **GPU** using **Iron Man** and
 
 ---
 
-# Example: Iron Man's Strategy
+## Example: Iron Man's Strategy
 
 - Iron Man thinks deeply and plans one strategy at a time, such as targeting the enemy’s weak spot.
 - His strength is in making complex decisions and executing them in sequence.
 
 ---
 
-# GPU (Hulk)
+## GPU (Hulk)
 
 - **Role**: Hulk represents the **GPU** because he is fast, powerful, and excels at performing many tasks simultaneously.
 - **Capabilities**: Hulk can smash many targets at once, handling parallel tasks efficiently.
@@ -35,7 +35,7 @@ In this presentation, we’ll compare **CPU** and **GPU** using **Iron Man** and
 
 ---
 
-# Example: Hulk’s Power
+## Example: Hulk’s Power
 
 - Hulk can smash many enemies at once without needing to think deeply about each one.
 - His strength is in handling multiple repetitive tasks in parallel, like rendering a scene or training a machine learning model.
@@ -44,27 +44,27 @@ In this presentation, we’ll compare **CPU** and **GPU** using **Iron Man** and
 
 ![bg left:40% 80%](./Nvidia_logo.svg)
 
-# **CUDA**
+## **CUDA**
 
 Nvidia's brainchild and flagship technology
 
 ---
 
-# CPU vs GPU in Action
+## CPU vs GPU in Action
 
 - **Iron Man (CPU)**: Handles complex tasks like running the operating system, managing logic, and processing varied software.
 - **Hulk (GPU)**: Handles tasks that involve large amounts of simple actions simultaneously, like rendering graphics or processing data.
 
 ---
 
-# In a Game Example
+## In a Game Example
 
 - **Iron Man (CPU)**: Manages game logic, character AI, and overall physics of the game.
 - **Hulk (GPU)**: Renders graphics and processes visual data, ensuring the game looks smooth and fast.
 
 ---
 
-# Conclusion
+## Conclusion
 
 - **Iron Man (CPU)**: Focuses on complex, sequential tasks.
 - **Hulk (GPU)**: Focuses on parallel tasks with raw power.
@@ -76,7 +76,7 @@ Nvidia's brainchild and flagship technology
 
 ---
 
-# CPU vs GPU
+## CPU vs GPU
 
 | **Feature**           | **CPU**                          | **GPU**                                              |
 | --------------------- | -------------------------------- | ---------------------------------------------------- |
@@ -88,7 +88,7 @@ Nvidia's brainchild and flagship technology
 
 ---
 
-# Definition
+## Definition
 
 - CUDA (Compute Unified Device Architecture) is a parallel computing platform and programming model developed by NVIDIA.
 - It allows developers to use NVIDIA GPUs (Graphics Processing Units) for general-purpose computing (GPGPU).
@@ -96,7 +96,7 @@ Nvidia's brainchild and flagship technology
 
 ---
 
-# Why CUDA?
+## Why CUDA?
 
 1. **High Performance**: Leverages thousands of GPU cores for parallel processing.
 2. **Ease of Use**: Extends C/C++ with simple keywords and APIs.
@@ -105,7 +105,7 @@ Nvidia's brainchild and flagship technology
 
 ---
 
-# CUDA Programming Model
+## CUDA Programming Model
 
 - Host (CPU): Executes the main program.
 - Device (GPU): Executes parallel computations.
@@ -118,7 +118,7 @@ Nvidia's brainchild and flagship technology
 
 ---
 
-# CUDA Execution Model
+## CUDA Execution Model
 
 CUDA organizes parallel execution into three levels:
 
@@ -160,7 +160,7 @@ CUDA organizes parallel execution into three levels:
 
 ---
 
-# Example Code without CUDA
+## Example Code without CUDA
 
 ```c
 #include <iostream>
@@ -191,7 +191,7 @@ int main() {
 
 ---
 
-# Explanation of the Code
+## Explanation of the Code
 
 - Declare Arrays: Create three arrays a, b, and c of size N.
 - Initialize Arrays:
@@ -206,7 +206,7 @@ int main() {
 
 ---
 
-# Example Code using CUDA
+## Example Code using CUDA
 
 ```c
 #include <iostream>
