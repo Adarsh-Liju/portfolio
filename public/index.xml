@@ -1,23 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Adarsh Liju Abraham</title>
+    <title>My New Hugo Site</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on Adarsh Liju Abraham</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>© 2025 Adarsh Liju Abraham</copyright>
-    <lastBuildDate>Sun, 01 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>CUDA</title>
-      <link>http://localhost:1313/posts/1740830260942-cuda/</link>
-      <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/posts/1740830260942-cuda/</guid>
-      <description>CPU vs GPU: The Iron Man and Hulk Analogy # In this presentation, we’ll compare CPU and GPU using Iron Man and Hulk as analogies.</description>
-      
-    </item>
-    
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
