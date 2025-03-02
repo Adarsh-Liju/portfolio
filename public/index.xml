@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>https://example.org/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>Adarsh Liju Abraham</title>
+    <link>https://adarshliju.vercel.app/</link>
+    <description>Recent content on Adarsh Liju Abraham</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 01 Mar 2025 17:07:53 +0000</lastBuildDate>
-    <atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://adarshliju.vercel.app/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cuda</title>
-      <link>https://example.org/posts/cuda/</link>
+      <link>https://adarshliju.vercel.app/posts/cuda/</link>
       <pubDate>Sat, 01 Mar 2025 17:07:53 +0000</pubDate>
-      <guid>https://example.org/posts/cuda/</guid>
+      <guid>https://adarshliju.vercel.app/posts/cuda/</guid>
       <description>CPU vs GPU: The Iron Man and Hulk Analogy In this presentation, we’ll compare CPU and GPU using Iron Man and Hulk as analogies.&#xA;Brain 🧠 vs Brawn 💪 In this section, we&amp;rsquo;ll use the analogy of Brain and Brawn to further illustrate the differences between CPU and GPU.&#xA;Brain (CPU): Represents the CPU because it excels in complex thinking, decision-making, and handling diverse tasks sequentially. Brawn (GPU): Represents the GPU because it excels in performing many simple tasks simultaneously with immense power.</description>
     </item>
   </channel>
