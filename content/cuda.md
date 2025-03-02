@@ -1,10 +1,10 @@
 +++
 title = 'Cuda'
 date = 2025-03-01T17:07:53Z
-draft = true
+draft = false
 +++
 
-# CPU vs GPU: The Iron Man and Hulk Analogy
+## CPU vs GPU: The Iron Man and Hulk Analogy
 
 In this presentation, we’ll compare **CPU** and **GPU** using **Iron Man** and **Hulk** as analogies.
 
@@ -153,10 +153,10 @@ CUDA organizes parallel execution into three levels:
 - Level Description Example (N=1024)
 - Grid Collection of blocks 4 blocks
 - Block Collection of threads 256 threads per block
-  Thread Executes kernel code 1024 threads total
-  🔹 Efficient execution → Each thread handles 1 computation.
-  🔹 Blocks run independently → Ideal for large-scale computations.
-  🔹 Scalable design → Works for any data size N.
+    Thread Executes kernel code 1024 threads total
+    🔹 Efficient execution → Each thread handles 1 computation.
+    🔹 Blocks run independently → Ideal for large-scale computations.
+    🔹 Scalable design → Works for any data size N.
 
 ---
 
@@ -168,24 +168,24 @@ CUDA organizes parallel execution into three levels:
 const int N = 1000000; // Size of the arrays
 // Function to add two arrays
 void add(const std::vector<int>& a, const std::vector<int>& b, std::vector<int>& c) {
-    for (int i = 0; i < N; i++) {
-        c[i] = a[i] + b[i];
-    }
+        for (int i = 0; i < N; i++) {
+                c[i] = a[i] + b[i];
+        }
 }
 int main() {
-    std::vector<int> a(N), b(N), c(N);
-    // Initialize arrays
-    for (int i = 0; i < N; i++) {
-        a[i] = i;
-        b[i] = i * 2;
-    }
-    // Perform addition
-    add(a, b, c);
-    // Print a few results
-    for (int i = 0; i < c.size(); i++) {
-        std::cout << "c[" << i << "] = " << c[i] << std::endl;
-    }
-    return 0;
+        std::vector<int> a(N), b(N), c(N);
+        // Initialize arrays
+        for (int i = 0; i < N; i++) {
+                a[i] = i;
+                b[i] = i * 2;
+        }
+        // Perform addition
+        add(a, b, c);
+        // Print a few results
+        for (int i = 0; i < c.size(); i++) {
+                std::cout << "c[" << i << "] = " << c[i] << std::endl;
+        }
+        return 0;
 }
 ```
 
@@ -195,12 +195,12 @@ int main() {
 
 - Declare Arrays: Create three arrays a, b, and c of size N.
 - Initialize Arrays:
-  - `a[i] = i`
-  - `b[i] = i \* 2`
+    - `a[i] = i`
+    - `b[i] = i \* 2`
 - Call add Function: Pass arrays a, b, and c to the add function.
 - In add Function:
-  - Loop from `0 to N-1`
-  - Add `a[i]` and `b[i]` and store the result in `c[i]`.
+    - Loop from `0 to N-1`
+    - Add `a[i]` and `b[i]` and store the result in `c[i]`.
 - Print Results: Display the first 10 elements of c.
 - End Program: Program finishes execution.
 
@@ -214,48 +214,48 @@ int main() {
 const int N = 1024; // Size of the arrays
 // CUDA kernel function to add two arrays
 __global__ void add(int *a, int *b, int *c) {
-    int idx = threadIdx.x + blockIdx.x * blockDim.x;
-    if (idx < N) {
-        c[idx] = a[idx] + b[idx];
-    }
+        int idx = threadIdx.x + blockIdx.x * blockDim.x;
+        if (idx < N) {
+                c[idx] = a[idx] + b[idx];
+        }
 }
 int main() {
-    int *a, *b, *c;  // Host pointers
-    int *d_a, *d_b, *d_c;  // Device pointers
-    size_t size = N * sizeof(int);
-    // Allocate host memory
-    a = (int*)malloc(size);
-    b = (int*)malloc(size);
-    c = (int*)malloc(size);
-    // Initialize host arrays
-    for (int i = 0; i < N; i++) {
-        a[i] = i;
-        b[i] = i * 2;
-    }
-    // Allocate device memory
-    cudaMalloc(&d_a, size);
-    cudaMalloc(&d_b, size);
-    cudaMalloc(&d_c, size);
-    // Copy data from host to device
-    cudaMemcpy(d_a, a, size, cudaMemcpyHostToDevice);
-    cudaMemcpy(d_b, b, size, cudaMemcpyHostToDevice);
-    // Launch the kernel with one block of 256 threads
-    add<<<(N + 255) / 256, 256>>>(d_a, d_b, d_c);
-    // Copy result from device to host
-    cudaMemcpy(c, d_c, size, cudaMemcpyDeviceToHost);
-    // Print a few results
-    for (int i = 0; i < 10; i++) {
-        std::cout << "c[" << i << "] = " << c[i] << std::endl;
-    }
-    // Free device memory
-    cudaFree(d_a);
-    cudaFree(d_b);
-    cudaFree(d_c);
-    // Free host memory
-    free(a);
-    free(b);
-    free(c);
-    return 0;
+        int *a, *b, *c;  // Host pointers
+        int *d_a, *d_b, *d_c;  // Device pointers
+        size_t size = N * sizeof(int);
+        // Allocate host memory
+        a = (int*)malloc(size);
+        b = (int*)malloc(size);
+        c = (int*)malloc(size);
+        // Initialize host arrays
+        for (int i = 0; i < N; i++) {
+                a[i] = i;
+                b[i] = i * 2;
+        }
+        // Allocate device memory
+        cudaMalloc(&d_a, size);
+        cudaMalloc(&d_b, size);
+        cudaMalloc(&d_c, size);
+        // Copy data from host to device
+        cudaMemcpy(d_a, a, size, cudaMemcpyHostToDevice);
+        cudaMemcpy(d_b, b, size, cudaMemcpyHostToDevice);
+        // Launch the kernel with one block of 256 threads
+        add<<<(N + 255) / 256, 256>>>(d_a, d_b, d_c);
+        // Copy result from device to host
+        cudaMemcpy(c, d_c, size, cudaMemcpyDeviceToHost);
+        // Print a few results
+        for (int i = 0; i < 10; i++) {
+                std::cout << "c[" << i << "] = " << c[i] << std::endl;
+        }
+        // Free device memory
+        cudaFree(d_a);
+        cudaFree(d_b);
+        cudaFree(d_c);
+        // Free host memory
+        free(a);
+        free(b);
+        free(c);
+        return 0;
 }
 ```
 
@@ -271,8 +271,7 @@ int main() {
 ### **Key Components:**
 
 ✅ **Host (CPU) Operations** – Memory allocation, data transfer.
-✅ **Device (GPU) Execution** – Parallel computation with CUDA kernels.
-✅ **Data Transfer & Cleanup** – Copy results back to CPU and free memory.
+✅ **Device (GPU) Execution** – Parallel computation with
 
 ---
 

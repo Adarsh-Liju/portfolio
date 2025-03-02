@@ -6,7 +6,14 @@
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
+    <lastBuildDate>Sat, 01 Mar 2025 17:07:53 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cuda</title>
+      <link>http://localhost:1313/cuda/</link>
+      <pubDate>Sat, 01 Mar 2025 17:07:53 +0000</pubDate>
+      <guid>http://localhost:1313/cuda/</guid>
+      <description>CPU vs GPU: The Iron Man and Hulk Analogy In this presentation, we’ll compare CPU and GPU using Iron Man and Hulk as analogies.&#xA;Brain:brain: vs Brawn:muscle:&#xA;CPU (Iron Man) Role: Iron Man represents the CPU because he is highly skilled in thinking, strategizing, and making complex decisions. Capabilities: Iron Man can do many different tasks (like controlling the Iron Man suit, designing technology, etc.), but he does them one at a time.</description>
+    </item>
   </channel>
 </rss>

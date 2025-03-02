@@ -1,0 +1,517 @@
+<!doctype html>
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg:#faf8f1"
+  lang="en-us"
+  dir="ltr"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>Cuda-My New Hugo Site</title>
+
+  
+  <meta name="theme-color" />
+
+  <meta name="description" content="CPU vs GPU: The Iron Man and Hulk Analogy In this presentation, we’ll compare CPU and GPU using Iron Man and Hulk as analogies.
+Brain:brain: vs Brawn:muscle:
+CPU (Iron Man) Role: Iron Man represents the CPU because he is highly skilled in thinking, strategizing, and making complex decisions. Capabilities: Iron Man can do many different tasks (like controlling the Iron Man suit, designing technology, etc.), but he does them one at a time." />
+  <meta name="author" content="My New Hugo Site" /><link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
+
+  
+  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
+
+  
+
+  
+
+  <script
+    defer
+    src="http://localhost:1313/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+
+  
+  <link
+    rel="icon"
+    href="http://localhost:1313/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="http://localhost:1313/apple-touch-icon.png"
+  />
+
+  <meta name="generator" content="Hugo 0.129.0">
+</head>
+<body class="text-black duration-200 ease-out dark:text-white"><header
+  class="mx-auto flex h-[4.5rem] max-w-(--w) px-8 whitespace-nowrap lg:justify-center"
+>
+  <div class="relative z-50 flex items-center ltr:mr-auto rtl:ml-auto">
+    <a
+      class="-translate-y-[1px] text-2xl font-medium"
+      href="http://localhost:1313/"
+      >My New Hugo Site</a
+    >
+    <div
+      class="btn-dark text-[0px] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden ltr:-mr-8 rtl:-ml-8"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full flex-col justify-center pb-16 duration-200 select-none lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none dark:bg-black"
+  >
+  </div>
+</header>
+<main
+      class="prose prose-neutral dark:prose-invert relative mx-auto min-h-[calc(100vh-9rem)] max-w-(--w) px-8 pt-14 pb-16"
+    ><article>
+  <header class="mb-14">
+    <h1 class="!my-0 pb-2.5">Cuda</h1></header>
+
+  <section><h2 id="cpu-vs-gpu-the-iron-man-and-hulk-analogy">CPU vs GPU: The Iron Man and Hulk Analogy</h2>
+<p>In this presentation, we’ll compare <strong>CPU</strong> and <strong>GPU</strong> using <strong>Iron Man</strong> and <strong>Hulk</strong> as analogies.</p>
+<p><strong>Brain:brain: vs Brawn:muscle:</strong></p>
+<hr>
+<h2 id="cpu-iron-man">CPU (Iron Man)</h2>
+<ul>
+<li><strong>Role</strong>: Iron Man represents the <strong>CPU</strong> because he is highly skilled in thinking, strategizing, and making complex decisions.</li>
+<li><strong>Capabilities</strong>: Iron Man can do many different tasks (like controlling the Iron Man suit, designing technology, etc.), but he does them one at a time.</li>
+<li><strong>Workload</strong>: The CPU can handle fewer tasks but can perform each one with a lot of variety and precision.</li>
+</ul>
+<hr>
+<h2 id="example-iron-mans-strategy">Example: Iron Man&rsquo;s Strategy</h2>
+<ul>
+<li>Iron Man thinks deeply and plans one strategy at a time, such as targeting the enemy’s weak spot.</li>
+<li>His strength is in making complex decisions and executing them in sequence.</li>
+</ul>
+<hr>
+<h2 id="gpu-hulk">GPU (Hulk)</h2>
+<ul>
+<li><strong>Role</strong>: Hulk represents the <strong>GPU</strong> because he is fast, powerful, and excels at performing many tasks simultaneously.</li>
+<li><strong>Capabilities</strong>: Hulk can smash many targets at once, handling parallel tasks efficiently.</li>
+<li><strong>Workload</strong>: The GPU handles lots of simple tasks in parallel, ideal for operations like graphics rendering and large data processing.</li>
+</ul>
+<hr>
+<h2 id="example-hulks-power">Example: Hulk’s Power</h2>
+<ul>
+<li>Hulk can smash many enemies at once without needing to think deeply about each one.</li>
+<li>His strength is in handling multiple repetitive tasks in parallel, like rendering a scene or training a machine learning model.</li>
+</ul>
+<hr>
+<p><img src="./Nvidia_logo.svg" alt="bg left:40% 80%"></p>
+<h2 id="cuda"><strong>CUDA</strong></h2>
+<p>Nvidia&rsquo;s brainchild and flagship technology</p>
+<hr>
+<h2 id="cpu-vs-gpu-in-action">CPU vs GPU in Action</h2>
+<ul>
+<li><strong>Iron Man (CPU)</strong>: Handles complex tasks like running the operating system, managing logic, and processing varied software.</li>
+<li><strong>Hulk (GPU)</strong>: Handles tasks that involve large amounts of simple actions simultaneously, like rendering graphics or processing data.</li>
+</ul>
+<hr>
+<h2 id="in-a-game-example">In a Game Example</h2>
+<ul>
+<li><strong>Iron Man (CPU)</strong>: Manages game logic, character AI, and overall physics of the game.</li>
+<li><strong>Hulk (GPU)</strong>: Renders graphics and processes visual data, ensuring the game looks smooth and fast.</li>
+</ul>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<ul>
+<li><strong>Iron Man (CPU)</strong>: Focuses on complex, sequential tasks.</li>
+<li><strong>Hulk (GPU)</strong>: Focuses on parallel tasks with raw power.</li>
+<li>Together, they make a powerful team for handling diverse computing tasks!</li>
+</ul>
+<hr>
+<p><img src="./cpu_gpu.png" alt="bg fit"></p>
+<hr>
+<h2 id="cpu-vs-gpu">CPU vs GPU</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Feature</strong></th>
+<th><strong>CPU</strong></th>
+<th><strong>GPU</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Purpose</strong></td>
+<td>General-purpose computation</td>
+<td>Specialized computation for graphics, parallel tasks</td>
+</tr>
+<tr>
+<td><strong>Task Handling</strong></td>
+<td>Single-threaded, complex tasks</td>
+<td>Highly parallel tasks (e.g., graphics rendering)</td>
+</tr>
+<tr>
+<td><strong>Optimization</strong></td>
+<td>Sequential processing</td>
+<td>Parallel processing</td>
+</tr>
+<tr>
+<td><strong>Cache Memory</strong></td>
+<td>Smaller (L1, L2, L3)</td>
+<td>Larger (VRAM) for high-speed data transfer</td>
+</tr>
+<tr>
+<td><strong>Energy Efficiency</strong></td>
+<td>More efficient for general tasks</td>
+<td>Higher power consumption for parallel tasks</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="definition">Definition</h2>
+<ul>
+<li>CUDA (Compute Unified Device Architecture) is a parallel computing platform and programming model developed by NVIDIA.</li>
+<li>It allows developers to use NVIDIA GPUs (Graphics Processing Units) for general-purpose computing (GPGPU).</li>
+<li>CUDA provides a way to harness the massive parallelism of GPUs to accelerate computations in various fields, including artificial intelligence, scientific simulations, and real-time graphics.</li>
+</ul>
+<hr>
+<h2 id="why-cuda">Why CUDA?</h2>
+<ol>
+<li><strong>High Performance</strong>: Leverages thousands of GPU cores for parallel processing.</li>
+<li><strong>Ease of Use</strong>: Extends C/C++ with simple keywords and APIs.</li>
+<li><strong>Massive Parallelism</strong>: Executes many tasks simultaneously.</li>
+<li><strong>Optimized Libraries</strong>: Offers libraries like cuBLAS (linear algebra), cuDNN (deep learning), and Thrust (high-level algorithms).</li>
+</ol>
+<hr>
+<h2 id="cuda-programming-model">CUDA Programming Model</h2>
+<ul>
+<li>Host (CPU): Executes the main program.</li>
+<li>Device (GPU): Executes parallel computations.</li>
+<li>Kernels: Functions executed on the GPU in parallel.</li>
+<li>Threads &amp; Blocks: CUDA organizes parallel execution in a grid of blocks, and each block contains multiple threads.</li>
+</ul>
+<hr>
+<p><img src="./block_thread_grid.svg" alt="bg fit"></p>
+<hr>
+<h2 id="cuda-execution-model">CUDA Execution Model</h2>
+<p>CUDA organizes parallel execution into three levels:</p>
+<h2 id="11-thread">1.1 Thread</h2>
+<ul>
+<li>The smallest execution unit in CUDA.</li>
+<li>Each thread performs a computation on a specific data index.</li>
+<li>Example: Each thread computes one element of an array (c[idx] = a[idx] + b[idx]).</li>
+</ul>
+<hr>
+<h2 id="12-block">1.2 Block</h2>
+<ul>
+<li>A block is a collection of multiple threads.</li>
+<li>Threads in a block can share shared memory and synchronize using __syncthreads().</li>
+<li>Each block has a unique ID (blockIdx.x, blockIdx.y, blockIdx.z).</li>
+<li>Threads inside a block have a thread ID (threadIdx.x, threadIdx.y, threadIdx.z).</li>
+<li>Blocks are executed independently by Streaming Multiprocessors (SMs) on the GPU.</li>
+</ul>
+<hr>
+<h2 id="13-grid">1.3 Grid</h2>
+<ul>
+<li>A grid is a collection of multiple blocks.</li>
+<li>Blocks are independent and do not share memory (unless using global memory).</li>
+<li>Each block processes a portion of the dataset.</li>
+</ul>
+<hr>
+<h2 id="summary-of-cuda-hierarchy">Summary of CUDA Hierarchy</h2>
+<ul>
+<li>Level Description Example (N=1024)</li>
+<li>Grid Collection of blocks 4 blocks</li>
+<li>Block Collection of threads 256 threads per block
+Thread Executes kernel code 1024 threads total
+🔹 Efficient execution → Each thread handles 1 computation.
+🔹 Blocks run independently → Ideal for large-scale computations.
+🔹 Scalable design → Works for any data size N.</li>
+</ul>
+<hr>
+<h2 id="example-code-without-cuda">Example Code without CUDA</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;vector&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> N <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000000</span>; <span style="color:#75715e">// Size of the arrays
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// Function to add two arrays
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">const</span> std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> a, <span style="color:#66d9ef">const</span> std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> b, std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> c) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> N; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>                c[i] <span style="color:#f92672">=</span> a[i] <span style="color:#f92672">+</span> b[i];
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>        std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">a</span>(N), <span style="color:#a6e22e">b</span>(N), <span style="color:#a6e22e">c</span>(N);
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Initialize arrays
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> N; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>                a[i] <span style="color:#f92672">=</span> i;
+</span></span><span style="display:flex;"><span>                b[i] <span style="color:#f92672">=</span> i <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Perform addition
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">add</span>(a, b, c);
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Print a few results
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> c.<span style="color:#a6e22e">size</span>(); i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>                std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;c[&#34;</span> <span style="color:#f92672">&lt;&lt;</span> i <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;] = &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c[i] <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h2 id="explanation-of-the-code">Explanation of the Code</h2>
+<ul>
+<li>Declare Arrays: Create three arrays a, b, and c of size N.</li>
+<li>Initialize Arrays:
+<ul>
+<li><code>a[i] = i</code></li>
+<li><code>b[i] = i \* 2</code></li>
+</ul>
+</li>
+<li>Call add Function: Pass arrays a, b, and c to the add function.</li>
+<li>In add Function:
+<ul>
+<li>Loop from <code>0 to N-1</code></li>
+<li>Add <code>a[i]</code> and <code>b[i]</code> and store the result in <code>c[i]</code>.</li>
+</ul>
+</li>
+<li>Print Results: Display the first 10 elements of c.</li>
+<li>End Program: Program finishes execution.</li>
+</ul>
+<hr>
+<h2 id="example-code-using-cuda">Example Code using CUDA</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;cuda_runtime.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> N <span style="color:#f92672">=</span> <span style="color:#ae81ff">1024</span>; <span style="color:#75715e">// Size of the arrays
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// CUDA kernel function to add two arrays
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>__global__ <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>a, <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>b, <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>c) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> idx <span style="color:#f92672">=</span> threadIdx.x <span style="color:#f92672">+</span> blockIdx.x <span style="color:#f92672">*</span> blockDim.x;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (idx <span style="color:#f92672">&lt;</span> N) {
+</span></span><span style="display:flex;"><span>                c[idx] <span style="color:#f92672">=</span> a[idx] <span style="color:#f92672">+</span> b[idx];
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>a, <span style="color:#f92672">*</span>b, <span style="color:#f92672">*</span>c;  <span style="color:#75715e">// Host pointers
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>d_a, <span style="color:#f92672">*</span>d_b, <span style="color:#f92672">*</span>d_c;  <span style="color:#75715e">// Device pointers
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">size_t</span> size <span style="color:#f92672">=</span> N <span style="color:#f92672">*</span> <span style="color:#66d9ef">sizeof</span>(<span style="color:#66d9ef">int</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Allocate host memory
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        a <span style="color:#f92672">=</span> (<span style="color:#66d9ef">int</span><span style="color:#f92672">*</span>)<span style="color:#a6e22e">malloc</span>(size);
+</span></span><span style="display:flex;"><span>        b <span style="color:#f92672">=</span> (<span style="color:#66d9ef">int</span><span style="color:#f92672">*</span>)<span style="color:#a6e22e">malloc</span>(size);
+</span></span><span style="display:flex;"><span>        c <span style="color:#f92672">=</span> (<span style="color:#66d9ef">int</span><span style="color:#f92672">*</span>)<span style="color:#a6e22e">malloc</span>(size);
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Initialize host arrays
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> N; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>                a[i] <span style="color:#f92672">=</span> i;
+</span></span><span style="display:flex;"><span>                b[i] <span style="color:#f92672">=</span> i <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Allocate device memory
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">cudaMalloc</span>(<span style="color:#f92672">&amp;</span>d_a, size);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">cudaMalloc</span>(<span style="color:#f92672">&amp;</span>d_b, size);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">cudaMalloc</span>(<span style="color:#f92672">&amp;</span>d_c, size);
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Copy data from host to device
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">cudaMemcpy</span>(d_a, a, size, cudaMemcpyHostToDevice);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">cudaMemcpy</span>(d_b, b, size, cudaMemcpyHostToDevice);
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Launch the kernel with one block of 256 threads
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        add<span style="color:#f92672">&lt;&lt;&lt;</span>(N <span style="color:#f92672">+</span> <span style="color:#ae81ff">255</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">256</span>, <span style="color:#ae81ff">256</span><span style="color:#f92672">&gt;&gt;&gt;</span>(d_a, d_b, d_c);
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Copy result from device to host
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">cudaMemcpy</span>(c, d_c, size, cudaMemcpyDeviceToHost);
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Print a few results
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>                std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;c[&#34;</span> <span style="color:#f92672">&lt;&lt;</span> i <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;] = &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c[i] <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Free device memory
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">cudaFree</span>(d_a);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">cudaFree</span>(d_b);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">cudaFree</span>(d_c);
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Free host memory
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">free</span>(a);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">free</span>(b);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">free</span>(c);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h2 id="step-1-cuda-program-overview"><strong>Step 1: CUDA Program Overview</strong></h2>
+<h3 id="objective"><strong>Objective:</strong></h3>
+<ul>
+<li>Perform <strong>parallel addition</strong> of two arrays using CUDA.</li>
+<li>Utilize <strong>GPU acceleration</strong> for faster computation.</li>
+</ul>
+<h3 id="key-components"><strong>Key Components:</strong></h3>
+<p>✅ <strong>Host (CPU) Operations</strong> – Memory allocation, data transfer.
+✅ <strong>Device (GPU) Execution</strong> – Parallel computation with</p>
+<hr>
+<h2 id="step-2-host-cpu-operations"><strong>Step 2: Host (CPU) Operations</strong></h2>
+<h3 id="1-memory-allocation--initialization"><strong>1. Memory Allocation &amp; Initialization</strong></h3>
+<p>✔ Allocate memory for arrays <code>a</code>, <code>b</code>, and <code>c</code>.
+✔ Initialize arrays:</p>
+<ul>
+<li><code>a[i] = i</code></li>
+<li><code>b[i] = i * 2</code></li>
+</ul>
+<h3 id="2-device-memory-allocation"><strong>2. Device Memory Allocation</strong></h3>
+<p>✔ Allocate GPU memory (<code>d_a</code>, <code>d_b</code>, <code>d_c</code>).</p>
+<h3 id="3-copy-data-to-device"><strong>3. Copy Data to Device</strong></h3>
+<p>✔ Use <code>cudaMemcpy()</code> to transfer <code>a</code> and <code>b</code> from <strong>CPU → GPU</strong>.</p>
+<hr>
+<h2 id="step-3-cuda-kernel-execution-gpu"><strong>Step 3: CUDA Kernel Execution (GPU)</strong></h2>
+<h3 id="1-kernel-launch"><strong>1. Kernel Launch</strong></h3>
+<p>🚀 <strong>Launch configuration:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>add<span style="color:#f92672">&lt;&lt;&lt;</span>(N <span style="color:#f92672">+</span> <span style="color:#ae81ff">255</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">256</span>, <span style="color:#ae81ff">256</span><span style="color:#f92672">&gt;&gt;&gt;</span>(d_a, d_b, d_c);
+</span></span></code></pre></div><p>✔ <code>(N + 255) / 256</code> → Computes required <strong>blocks</strong>.
+✔ <code>256</code> → Number of <strong>threads per block</strong>.</p>
+<hr>
+<h3 id="2-parallel-computation"><strong>2. Parallel Computation</strong></h3>
+<p>✔ <strong>Each thread</strong> executes:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>c[idx] <span style="color:#f92672">=</span> a[idx] <span style="color:#f92672">+</span> b[idx];
+</span></span></code></pre></div><p>✔ Index calculation:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> idx <span style="color:#f92672">=</span> threadIdx.x <span style="color:#f92672">+</span> blockIdx.x <span style="color:#f92672">*</span> blockDim.x;
+</span></span></code></pre></div><p>✔ Threads operate <strong>independently</strong> for speedup.</p>
+<hr>
+<h2 id="step-4-cuda-grid--block-structure"><strong>Step 4: CUDA Grid &amp; Block Structure</strong></h2>
+<h3 id="grid--block-breakdown"><strong>Grid &amp; Block Breakdown:</strong></h3>
+<ul>
+<li><strong>Grid Size</strong>: <code>(N + 255) / 256</code> blocks</li>
+<li><strong>Block Size</strong>: <code>256</code> threads</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>Block</strong></th>
+<th><strong>Threads</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Block 0</td>
+<td><code>[0 - 255]</code></td>
+</tr>
+<tr>
+<td>Block 1</td>
+<td><code>[256 - 511]</code></td>
+</tr>
+<tr>
+<td>Block 2</td>
+<td><code>[512 - 767]</code></td>
+</tr>
+<tr>
+<td>Block 3</td>
+<td><code>[768 - 1023]</code></td>
+</tr>
+</tbody>
+</table>
+<p>✔ <strong>Scalable Design</strong> – Works for large <code>N</code>.</p>
+<hr>
+<h2 id="step-5-copy-back--cleanup"><strong>Step 5: Copy Back &amp; Cleanup</strong></h2>
+<h3 id="1-transfer-results-to-host-cpu--gpu"><strong>1. Transfer Results to Host (CPU ← GPU)</strong></h3>
+<p>✔ <code>cudaMemcpy()</code> moves <code>c</code> from <strong>GPU → CPU</strong>.</p>
+<h3 id="2-display-results"><strong>2. Display Results</strong></h3>
+<p>✔ Print the first <strong>10 values of <code>c</code></strong>.</p>
+<h3 id="3-free-memory"><strong>3. Free Memory</strong></h3>
+<p>✔ Deallocate memory:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>cudaFree(d_a); cudaFree(d_b); cudaFree(d_c);
+</span></span><span style="display:flex;"><span>free(a); free(b); free(c);
+</span></span></code></pre></div><hr>
+<h2 id="step-6-why-is-cuda-efficient"><strong>Step 6: Why is CUDA Efficient?</strong></h2>
+<h3 id="performance-benefits"><strong>Performance Benefits:</strong></h3>
+<p>✅ <strong>Massive Parallelism</strong> – Thousands of threads run <strong>simultaneously</strong>.
+✅ <strong>Optimized Memory Transfers</strong> – Reduces CPU-GPU communication overhead.
+✅ <strong>Scalability</strong> – Can handle large datasets efficiently.
+✅ <strong>Minimal Code Changes</strong> – Works across different GPU architectures.</p>
+<hr>
+<h3 id="summary--takeaways"><strong>Summary &amp; Takeaways</strong></h3>
+<p>📌 <strong>CUDA enables parallel computing with GPU acceleration.</strong>
+📌 <strong>Each thread independently computes a portion of the data.</strong>
+📌 <strong>CUDA’s grid &amp; block model optimizes performance.</strong>
+📌 <strong>Efficient memory management ensures speedup.</strong></p>
+<p>🔥 <strong>Key Learning:</strong> GPUs can dramatically <strong>speed up computations</strong> by executing thousands of threads in parallel! 🚀</p>
+<hr>
+<h2 id="compilation-and-execution"><strong>Compilation and Execution</strong></h2>
+<h3 id="for-cpu-version"><strong>For CPU Version</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>g++ -o cpu_addition cpu_addition.cpp -O2
+</span></span><span style="display:flex;"><span>./cpu_addition
+</span></span></code></pre></div><h3 id="for-cuda-version"><strong>For CUDA Version</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nvcc -o cuda_addition cuda_addition.cu
+</span></span><span style="display:flex;"><span>./cuda_addition
+</span></span></code></pre></div><hr>
+<h2 id="performance-expectations"><strong>Performance Expectations</strong></h2>
+<ul>
+<li><strong>CPU Version</strong>: Runs in a single thread, slower than GPU but still optimized.</li>
+<li><strong>CUDA Version</strong>: Uses GPU parallelism, which is significantly faster for large arrays.</li>
+</ul>
+<hr>
+<h2 id="conclusion-1"><strong>Conclusion</strong></h2>
+<ul>
+<li>The CUDA version should be <strong>faster</strong> due to GPU parallelism.</li>
+<li>The CPU version is easier to use and doesn’t require a dedicated GPU.</li>
+<li>CUDA requires data transfers between CPU and GPU, which can add overhead.</li>
+</ul>
+</section>
+
+  </article></main><footer
+  class="mx-auto flex h-[4.5rem] max-w-(--w) items-center px-8 text-xs tracking-wider uppercase opacity-60"
+>
+  <div class="mr-auto">&copy;2025<a class="link" href="http://localhost:1313/">My New Hugo Site</a></div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >powered by hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >hugo-paper</a
+  >
+</footer>
+</body>
+</html>
