@@ -201,12 +201,12 @@ int main() {
 
 - Declare Arrays: Create three arrays a, b, and c of size N.
 - Initialize Arrays:
-    - `a[i] = i`
-    - `b[i] = i \* 2`
+  - `a[i] = i`
+  - `b[i] = i \* 2`
 - Call add Function: Pass arrays a, b, and c to the add function.
 - In add Function:
-    - Loop from `0 to N-1`
-    - Add `a[i]` and `b[i]` and store the result in `c[i]`.
+  - Loop from `0 to N-1`
+  - Add `a[i]` and `b[i]` and store the result in `c[i]`.
 - Print Results: Display the first 10 elements of c.
 - End Program: Program finishes execution.
 
