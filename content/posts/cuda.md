@@ -8,7 +8,14 @@ draft = false
 
 In this presentation, we’ll compare **CPU** and **GPU** using **Iron Man** and **Hulk** as analogies.
 
-**Brain:brain: vs Brawn:muscle:**
+## Brain 🧠 vs Brawn 💪
+
+In this section, we'll use the analogy of **Brain** and **Brawn** to further illustrate the differences between **CPU** and **GPU**.
+
+- **Brain (CPU)**: Represents the **CPU** because it excels in complex thinking, decision-making, and handling diverse tasks sequentially.
+- **Brawn (GPU)**: Represents the **GPU** because it excels in performing many simple tasks simultaneously with immense power.
+
+This analogy helps to understand how CPUs and GPUs complement each other in computing tasks.
 
 ---
 
@@ -41,8 +48,7 @@ In this presentation, we’ll compare **CPU** and **GPU** using **Iron Man** and
 - His strength is in handling multiple repetitive tasks in parallel, like rendering a scene or training a machine learning model.
 
 ---
-
-![bg left:40% 80%](./Nvidia_logo.svg)
+![nvidia_logo](./Nvidia_logo.svg)
 
 ## **CUDA**
 
@@ -371,19 +377,19 @@ free(a); free(b); free(c);
 
 ### **Performance Benefits:**
 
-✅ **Massive Parallelism** – Thousands of threads run **simultaneously**.
-✅ **Optimized Memory Transfers** – Reduces CPU-GPU communication overhead.
-✅ **Scalability** – Can handle large datasets efficiently.
-✅ **Minimal Code Changes** – Works across different GPU architectures.
+- ✅ **Massive Parallelism** – Thousands of threads run **simultaneously**.
+- ✅ **Optimized Memory Transfers** – Reduces CPU-GPU communication overhead.
+- ✅ **Scalability** – Can handle large datasets efficiently.
+- ✅ **Minimal Code Changes** – Works across different GPU architectures.
 
 ---
 
 ### **Summary & Takeaways**
 
-📌 **CUDA enables parallel computing with GPU acceleration.**
-📌 **Each thread independently computes a portion of the data.**
-📌 **CUDA’s grid & block model optimizes performance.**
-📌 **Efficient memory management ensures speedup.**
+- 📌 **CUDA enables parallel computing with GPU acceleration.**
+- 📌 **Each thread independently computes a portion of the data.**
+- 📌 **CUDA’s grid & block model optimizes performance.**
+- 📌 **Efficient memory management ensures speedup.**
 
 🔥 **Key Learning:** GPUs can dramatically **speed up computations** by executing thousands of threads in parallel! 🚀
 
