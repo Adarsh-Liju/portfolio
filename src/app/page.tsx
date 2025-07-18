@@ -2,6 +2,22 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { 
+  faMapMarkerAlt, 
+  faPhone, 
+  faEnvelope, 
+  faGraduationCap, 
+  faBolt, 
+  faBriefcase, 
+  faRocket, 
+  faBook, 
+  faBullseye 
+} from '@fortawesome/free-solid-svg-icons';
+import { 
+  faLinkedin, 
+  faGithub 
+} from '@fortawesome/free-brands-svg-icons';
 
 const fadeIn = (delay = 0) => ({
   initial: { opacity: 0, y: 30 },
@@ -28,7 +44,7 @@ const staggerContainer = {
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-black text-white font-inter">
+    <div className="min-h-screen bg-black text-white font-sans antialiased">
       <motion.main 
         className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8"
         initial={{ opacity: 0 }}
@@ -44,7 +60,8 @@ export default function HomePage() {
         >
           <div className="text-center mb-12">
             <motion.h1 
-              className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 font-serif tracking-tight"
+              className="text-5xl sm:text-6xl lg:text-7xl font-black text-white mb-6 tracking-tighter leading-tight"
+              style={{ fontFamily: 'MesloLGS NF, SF Pro Display, -apple-system, BlinkMacSystemFont, sans-serif' }}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.4 }}
@@ -52,7 +69,8 @@ export default function HomePage() {
               Adarsh Liju Abraham
             </motion.h1>
             <motion.p 
-              className="text-xl sm:text-2xl text-gray-300 mb-6 font-mono"
+              className="text-xl sm:text-2xl text-gray-300 mb-6 font-light tracking-wide"
+              style={{ fontFamily: 'MesloLGS NF, JetBrains Mono, Consolas, Monaco, monospace' }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
@@ -60,21 +78,22 @@ export default function HomePage() {
               Python Engineer | System Engineer | Backend Developer
             </motion.p>
             <motion.div 
-              className="flex flex-col sm:flex-row items-center justify-center gap-4 text-gray-400 mb-8 font-inter"
+              className="flex flex-col sm:flex-row items-center justify-center gap-4 text-gray-400 mb-8"
+              style={{ fontFamily: 'MesloLGS NF, SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif' }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
             >
-              <div className="flex items-center gap-2 hover:text-white transition-colors">
-                <span className="text-white">📍</span>
+              <div className="flex items-center gap-2 hover:text-white transition-colors font-medium">
+                <FontAwesomeIcon icon={faMapMarkerAlt} className="text-white" />
                 <span>Bengaluru, India</span>
               </div>
-              <div className="flex items-center gap-2 hover:text-white transition-colors">
-                <span className="text-white">📞</span>
+              <div className="flex items-center gap-2 hover:text-white transition-colors font-medium">
+                <FontAwesomeIcon icon={faPhone} className="text-white" />
                 <span>8088229177</span>
               </div>
-              <div className="flex items-center gap-2 hover:text-white transition-colors">
-                <span className="text-white">📧</span>
+              <div className="flex items-center gap-2 hover:text-white transition-colors font-medium">
+                <FontAwesomeIcon icon={faEnvelope} className="text-white" />
                 <a href="mailto:adarsh.liju.abraham@gmail.com" className="underline hover:text-white transition-colors">
                   adarsh.liju.abraham@gmail.com
                 </a>
@@ -89,22 +108,20 @@ export default function HomePage() {
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link 
                   href="https://www.linkedin.com/in/adarsh-liju-abraham" 
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black rounded-lg transition-all duration-300 font-inter font-medium hover:bg-gray-200 hover:shadow-lg"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black rounded-lg transition-all duration-300 font-semibold hover:bg-gray-200 hover:shadow-lg tracking-wide"
+                  style={{ fontFamily: 'MesloLGS NF, SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif' }}
                 >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                  </svg>
+                  <FontAwesomeIcon icon={faLinkedin} className="w-5 h-5" />
                   LinkedIn
                 </Link>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link 
                   href="https://github.com/Adarsh-Liju" 
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-gray-900 text-white rounded-lg transition-all duration-300 font-inter font-medium hover:bg-gray-800 hover:shadow-lg border border-gray-700"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-gray-900 text-white rounded-lg transition-all duration-300 font-semibold hover:bg-gray-800 hover:shadow-lg border border-gray-700 tracking-wide"
+                  style={{ fontFamily: 'MesloLGS NF, SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif' }}
                 >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                  </svg>
+                  <FontAwesomeIcon icon={faGithub} className="w-5 h-5" />
                   GitHub
                 </Link>
               </motion.div>
@@ -121,8 +138,9 @@ export default function HomePage() {
             className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300"
             whileHover={{ y: -5 }}
           >
-            <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3 font-serif">
-              <span className="text-white">🎓</span>
+            <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3 tracking-tight"
+                style={{ fontFamily: 'MesloLGS NF, SF Pro Display, -apple-system, BlinkMacSystemFont, sans-serif' }}>
+              <FontAwesomeIcon icon={faGraduationCap} className="text-white" />
               Education
             </h2>
             <div className="space-y-4">
@@ -130,9 +148,12 @@ export default function HomePage() {
                 className="bg-white/5 rounded-lg p-6 hover:bg-white/10 transition-colors"
                 whileHover={{ x: 5 }}
               >
-                <h3 className="text-xl font-semibold text-white mb-2 font-inter">Bachelor of Technology, Computer Science</h3>
-                <p className="text-gray-300 font-medium mb-2 font-inter">PES University | 2020 — 2024</p>
-                <p className="text-gray-300 text-sm font-inter">Relevant Coursework: Operating Systems, Computer Networks, Cloud Computing, Database Management Systems</p>
+                <h3 className="text-xl font-bold text-white mb-2 tracking-wide"
+                    style={{ fontFamily: 'MesloLGS NF, SF Pro Display, -apple-system, BlinkMacSystemFont, sans-serif' }}>Bachelor of Technology, Computer Science</h3>
+                <p className="text-gray-300 font-semibold mb-2 tracking-wide"
+                   style={{ fontFamily: 'MesloLGS NF, SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif' }}>PES University | 2020 — 2024</p>
+                <p className="text-gray-300 text-sm leading-relaxed"
+                   style={{ fontFamily: 'MesloLGS NF, SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif' }}>Relevant Coursework: Operating Systems, Computer Networks, Cloud Computing, Database Management Systems</p>
               </motion.div>
             </div>
           </motion.div>
@@ -147,8 +168,9 @@ export default function HomePage() {
             className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300"
             whileHover={{ y: -5 }}
           >
-            <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3 font-serif">
-              <span className="text-white">⚡</span>
+            <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3 tracking-tight"
+                style={{ fontFamily: 'MesloLGS NF, SF Pro Display, -apple-system, BlinkMacSystemFont, sans-serif' }}>
+              <FontAwesomeIcon icon={faBolt} className="text-white" />
               Technical Skills
             </h2>
             <motion.div 
@@ -168,12 +190,14 @@ export default function HomePage() {
                   variants={scaleIn(i * 0.1)}
                   whileHover={{ scale: 1.02 }}
                 >
-                  <h3 className="text-lg font-semibold text-white mb-3 font-inter">{group.heading}</h3>
+                  <h3 className="text-lg font-bold text-white mb-3 tracking-wide"
+                      style={{ fontFamily: 'MesloLGS NF, SF Pro Display, -apple-system, BlinkMacSystemFont, sans-serif' }}>{group.heading}</h3>
                   <div className="flex flex-wrap gap-2">
                     {group.tags.map(tag => (
                       <motion.span 
                         key={tag} 
-                        className="px-3 py-1 bg-white/10 text-white rounded-full text-sm border border-white/20 font-mono hover:bg-white/20 transition-colors"
+                        className="px-3 py-1 bg-white/10 text-white rounded-full text-sm border border-white/20 hover:bg-white/20 transition-colors font-medium tracking-wide"
+                        style={{ fontFamily: 'MesloLGS NF, JetBrains Mono, Consolas, Monaco, monospace' }}
                         whileHover={{ scale: 1.05 }}
                       >
                         {tag}
@@ -187,12 +211,14 @@ export default function HomePage() {
               className="mt-6 bg-white/5 rounded-lg p-6 hover:bg-white/10 transition-colors"
               whileHover={{ x: 5 }}
             >
-              <h3 className="text-lg font-semibold text-white mb-3 font-inter">Languages Spoken</h3>
+              <h3 className="text-lg font-bold text-white mb-3 tracking-wide"
+                  style={{ fontFamily: 'MesloLGS NF, SF Pro Display, -apple-system, BlinkMacSystemFont, sans-serif' }}>Languages Spoken</h3>
               <div className="flex flex-wrap gap-2">
                 {['Malayalam (Fluent)', 'Hindi (Fluent)', 'English (Fluent)', 'Kannada (Conversational)'].map((lang) => (
                   <motion.span 
                     key={lang} 
-                    className="px-3 py-1 bg-white/10 text-white rounded-full text-sm border border-white/20 font-mono hover:bg-white/20 transition-colors"
+                    className="px-3 py-1 bg-white/10 text-white rounded-full text-sm border border-white/20 hover:bg-white/20 transition-colors font-medium tracking-wide"
+                    style={{ fontFamily: 'MesloLGS NF, SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif' }}
                     whileHover={{ scale: 1.05 }}
                   >
                     {lang}
@@ -212,14 +238,16 @@ export default function HomePage() {
             className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300"
             whileHover={{ y: -5 }}
           >
-            <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3 font-serif">
-              <span className="text-white">💼</span>
+            <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3 tracking-tight"
+                style={{ fontFamily: 'Inter, system-ui, -apple-system, sans-serif' }}>
+              <FontAwesomeIcon icon={faBriefcase} className="text-white" />
               Professional Experience
             </h2>
             
             {/* Full Time Roles */}
             <div className="mb-8">
-              <h3 className="text-xl font-semibold text-white mb-4 font-inter">Full Time Roles</h3>
+              <h3 className="text-xl font-bold text-white mb-4 tracking-wide"
+                  style={{ fontFamily: 'Inter, system-ui, -apple-system, sans-serif' }}>Full Time Roles</h3>
               <div className="space-y-6">
                 {[
                   {
@@ -253,16 +281,20 @@ export default function HomePage() {
                     transition={{ delay: i * 0.2 }}
                     whileHover={{ x: 5 }}
                   >
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                      <h4 className="text-lg font-semibold text-white font-inter">{role.title}</h4>
-                      <span className="text-gray-300 text-sm font-inter">{role.period}</span>
+                                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+                      <h4 className="text-lg font-bold text-white tracking-wide"
+                          style={{ fontFamily: 'Inter, system-ui, -apple-system, sans-serif' }}>{role.title}</h4>
+                      <span className="text-gray-300 text-sm font-semibold tracking-wide"
+                            style={{ fontFamily: 'Inter, system-ui, -apple-system, sans-serif' }}>{role.period}</span>
                     </div>
-                    <p className="text-gray-400 mb-3 font-inter">{role.company}</p>
-                      <ul className="list-disc space-y-2 text-sm font-sans text-white pl-4">
-                      {role.points.map((point, j) => (
-                        <li key={j} className="text-white">{point}</li>
-                      ))}
-                    </ul>
+                    <p className="text-gray-400 mb-3 font-semibold tracking-wide"
+                       style={{ fontFamily: 'Inter, system-ui, -apple-system, sans-serif' }}>{role.company}</p>
+                      <ul className="list-disc space-y-2 text-sm text-white pl-4 leading-relaxed"
+                          style={{ fontFamily: 'Inter, system-ui, -apple-system, sans-serif' }}>
+                        {role.points.map((point, j) => (
+                          <li key={j} className="text-white">{point}</li>
+                        ))}
+                      </ul>
                   </motion.div>
                 ))}
               </div>
@@ -341,7 +373,7 @@ export default function HomePage() {
             whileHover={{ y: -5 }}
           >
             <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3 font-serif">
-              <span className="text-white">🚀</span>
+              <FontAwesomeIcon icon={faRocket} className="text-white" />
               Technical Projects
             </h2>
             <motion.div 
@@ -418,7 +450,7 @@ export default function HomePage() {
             whileHover={{ y: -5 }}
           >
             <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3 font-serif">
-              <span className="text-white">📚</span>
+              <FontAwesomeIcon icon={faBook} className="text-white" />
               Research Publications
             </h2>
             <div className="space-y-6">
@@ -473,7 +505,7 @@ export default function HomePage() {
             whileHover={{ y: -5 }}
           >
             <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3 font-serif">
-              <span className="text-white">🎯</span>
+              <FontAwesomeIcon icon={faBullseye} className="text-white" />
               Final Year Project
             </h2>
             <motion.div 
