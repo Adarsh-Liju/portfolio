@@ -258,12 +258,9 @@ export default function HomePage() {
                       <span className="text-gray-300 text-sm font-inter">{role.period}</span>
                     </div>
                     <p className="text-gray-400 mb-3 font-inter">{role.company}</p>
-                    <ul className="space-y-2 text-sm text-gray-300 font-inter">
+                      <ul className="list-disc space-y-2 text-sm font-sans text-white pl-4">
                       {role.points.map((point, j) => (
-                        <li key={j} className="flex items-start gap-2">
-                          <span className="text-white mt-1">•</span>
-                          <span>{point}</span>
-                        </li>
+                        <li key={j} className="text-white">{point}</li>
                       ))}
                     </ul>
                   </motion.div>
@@ -320,11 +317,10 @@ export default function HomePage() {
                       <span className="text-gray-300 text-sm font-inter">{internship.period}</span>
                     </div>
                     <p className="text-gray-400 mb-3 font-inter">{internship.company}</p>
-                    <ul className="space-y-2 text-sm text-gray-300 font-inter">
+                    <ul className="space-y-2 text-sm text-gray-300 font-inter pl-4">
                       {internship.points.map((point, j) => (
-                        <li key={j} className="flex items-start gap-2">
-                          <span className="text-white mt-1">•</span>
-                          <span>{point}</span>
+                        <li key={j} className="text-white">
+                          {point}
                         </li>
                       ))}
                     </ul>
@@ -454,11 +450,10 @@ export default function HomePage() {
                 >
                   <h3 className="text-lg font-semibold text-white mb-2 font-inter">{pub.title}</h3>
                   <p className="text-gray-300 text-sm mb-3 font-inter">{pub.venue}</p>
-                  <ul className="space-y-2 text-sm text-gray-300 font-inter">
+                  <ul className="space-y-2 text-sm text-gray-300 font-inter pl-4">
                     {pub.points.map((point, j) => (
-                      <li key={j} className="flex items-start gap-2">
-                        <span className="text-white mt-1">•</span>
-                        <span>{point}</span>
+                      <li key={j} className="text-white">
+                        {point}
                       </li>
                     ))}
                   </ul>
@@ -486,86 +481,22 @@ export default function HomePage() {
               whileHover={{ x: 5 }}
             >
               <h3 className="text-xl font-semibold text-white mb-3 font-inter">Harnessing the Power of Blockchain in SDN for Distributed Applications</h3>
-              <ul className="space-y-2 text-sm text-gray-300 font-inter">
-                <li className="flex items-start gap-2">
-                  <span className="text-white mt-1">•</span>
-                  <span>Integrated blockchain with SDN to enhance security, reducing attack vectors by 60%</span>
+              <ul className="space-y-2 text-sm text-gray-300 font-inter pl-4">
+                <li className="text-white">
+                  Integrated blockchain with SDN to enhance security, reducing attack vectors by 60%
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-white mt-1">•</span>
-                  <span>Developed an ONOS controller cluster achieving 95% availability</span>
+                <li className="text-white">
+                  Developed an ONOS controller cluster achieving 95% availability
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-white mt-1">•</span>
-                  <span>Evaluated performance metrics, identifying and mitigating 15 critical security vulnerabilities</span>
+                <li className="text-white">
+                  Evaluated performance metrics, identifying and mitigating 15 critical security vulnerabilities
                 </li>
               </ul>
             </motion.div>
           </motion.div>
         </motion.section>
 
-        {/* Additional Information Section */}
-        <motion.section 
-          className="mb-16"
-          {...fadeIn(1.4)}
-        >
-          <motion.div 
-            className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300"
-            whileHover={{ y: -5 }}
-          >
-            <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3 font-serif">
-              <span className="text-white">🏆</span>
-              Additional Information
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <motion.div 
-                className="bg-white/5 rounded-lg p-6 hover:bg-white/10 transition-colors"
-                whileHover={{ x: 5 }}
-              >
-                <h3 className="text-lg font-semibold text-white mb-3 font-inter">Leadership & Activities</h3>
-                <ul className="space-y-2 text-sm text-gray-300 font-inter">
-                  <li className="flex items-start gap-2">
-                    <span className="text-white mt-1">•</span>
-                    <span>Mentored students as a key member of HackerSpace Club, organizing hackathons and guiding innovative projects</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-white mt-1">•</span>
-                    <span>Led a team of 5 in a capstone project, managing timelines and fostering collaboration</span>
-                  </li>
-                </ul>
-              </motion.div>
-              <motion.div 
-                className="bg-white/5 rounded-lg p-6 hover:bg-white/10 transition-colors"
-                whileHover={{ x: 5 }}
-              >
-                <h3 className="text-lg font-semibold text-white mb-3 font-inter">Achievements</h3>
-                <ul className="space-y-2 text-sm text-gray-300 font-inter">
-                  <li className="flex items-start gap-2">
-                    <span className="text-white mt-1">•</span>
-                    <span>Active contributor to open-source projects with 500+ GitHub contributions in the last year</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-white mt-1">•</span>
-                    <span>Won first place in 3 national-level hackathons for innovative solutions in system design</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-white mt-1">•</span>
-                    <span>Published technical articles on Medium with 10K+ monthly readers</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-white mt-1">•</span>
-                    <span>Holds AWS Solutions Architect Associate certification</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-white mt-1">•</span>
-                    <span>Good Human Certified Nice</span>
-                  </li>
-                </ul>
-              </motion.div>
-            </div>
-          </motion.div>
-        </motion.section>
-      </motion.main>
-    </div>
+        </motion.main>
+        </div>
   );
 }
