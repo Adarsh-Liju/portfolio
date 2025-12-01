@@ -1,45 +1,59 @@
-// (no runtime import needed - using JSX transform)
-import { Card } from './ui/card'
-import Button from './ui/button'
-
 const projects = [
   {
-    title: 'Portfolio Site',
-    description: 'This portfolio (built with Vite + React + TypeScript) — a lightweight, fast and accessible personal site.',
-    repo: 'https://github.com/adarsh',
-    live: '#'
+    title: 'Project Turtle',
+    description: 'Streamlined shell script for installing essential tools on Linux systems.',
+    highlight: 'Part of Hacktoberfest • Used to bootstrap tools on servers and workstations',
+    team: 'Team of 2',
+    tech: ['Shell Scripting', 'Linux', 'Bash']
   },
   {
-    title: 'Project Two',
-    description: 'A component-driven UI library with automated tests and story-driven documentation.',
-    repo: 'https://github.com/',
-    live: '#'
+    title: 'Yet Another Markdown Converter',
+    description: 'CLI tool for converting Markdown to HTML with customizable theming.',
+    highlight: 'Flexible and automated solution for document conversion',
+    team: 'Solo project',
+    tech: ['CLI', 'Markdown', 'HTML']
   },
   {
-    title: 'PWA Example',
-    description: 'An offline-first progressive web app that demonstrates caching, service workers and fast startup times.',
-    repo: 'https://github.com/',
-    live: '#'
+    title: 'DoctorPres',
+    description: 'Digital prescription system replacing handwritten prescriptions.',
+    highlight: 'Database triggers for validation • Stored procedures for complex queries',
+    team: 'Solo project',
+    tech: ['Streamlit', 'MySQL', 'Python']
+  },
+  {
+    title: 'Secure Dapps Platform',
+    description: 'Blockchain-integrated platform for decentralized applications.',
+    highlight: 'ONOS controller cluster eliminates single point of failure',
+    team: 'Team of 4',
+    tech: ['Blockchain', 'SDN', 'ONOS']
   }
 ]
 
 export default function Projects() {
   return (
-    <section id="projects" className="max-w-[1100px] mx-auto px-4 py-12">
-      <h2 className="text-2xl font-semibold">Selected projects</h2>
+    <section id="projects" className="max-w-4xl mx-auto px-6">
+      <h2>Projects</h2>
 
-      <div className="mt-6 grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-2">
         {projects.map((p) => (
-          <article key={p.title} className="rounded-xl overflow-hidden border border-white/5 bg-gradient-to-b from-white/2 to-transparent flex flex-col">
-            <div className="h-28 bg-gradient-to-tr from-indigo-400 via-fuchsia-400 to-sky-400" />
-            <Card className="p-4 flex flex-col gap-3 flex-1">
-              <h3 className="text-lg font-semibold">{p.title}</h3>
-              <p className="text-sm text-white/80">{p.description}</p>
-              <div className="mt-auto flex gap-2">
-                <Button size="sm" href={p.repo} target="_blank" rel="noreferrer">Repo</Button>
-                <Button size="sm" variant="primary" href={p.live} target="_blank" rel="noreferrer">Live</Button>
-              </div>
-            </Card>
+          <article key={p.title} className="border border-border rounded-xl bg-card p-6 hover-lift">
+            <div className="mb-4">
+              <h3 className="text-lg font-semibold mb-2">{p.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-2">{p.description}</p>
+              <p className="text-xs text-muted-foreground italic">{p.highlight}</p>
+            </div>
+            
+            <div className="flex flex-wrap gap-2 mb-3">
+              {p.tech.map((tech) => (
+                <span key={tech} className="text-xs px-2 py-1 rounded-md bg-muted text-muted-foreground">
+                  {tech}
+                </span>
+              ))}
+            </div>
+            
+            <div className="text-xs text-muted-foreground">
+              {p.team}
+            </div>
           </article>
         ))}
       </div>

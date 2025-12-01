@@ -1,28 +1,28 @@
-// (no runtime import needed - using JSX transform)
+import ThemeToggle from './ThemeToggle'
 
 export default function Header() {
   return (
-    <header className="sticky top-0 bg-black/40 backdrop-blur-sm border-b border-white/5 py-3 z-20">
-      <div className="max-w-[1100px] mx-auto px-4 flex items-center justify-between gap-4">
+    <header className="sticky top-0 bg-card/80 backdrop-blur-sm border-b border-border z-50">
+      <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 rounded-md overflow-hidden" aria-hidden>
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="12" r="10" fill="#646cff" />
-              <text x="12" y="16" textAnchor="middle" fontSize="10" fill="#fff">AL</text>
-            </svg>
+          <div className="w-10 h-10 rounded-lg bg-foreground text-background flex items-center justify-center font-semibold text-sm" aria-hidden>
+            AL
           </div>
           <div>
-            <div className="font-semibold text-sm">Adarsh Liju Abraham</div>
-            <div className="text-xs text-white/60">Frontend Engineer</div>
+            <div className="font-medium text-sm">Adarsh Liju Abraham</div>
+            <div className="text-xs text-muted-foreground">System Engineer</div>
           </div>
         </div>
 
-        <nav aria-label="Main navigation" className="flex gap-3 items-center">
-          <a className="text-sm font-medium text-white/70 hover:text-white px-2 py-1 rounded" href="#home">Home</a>
-          <a className="text-sm font-medium text-white/70 hover:text-white px-2 py-1 rounded" href="#projects">Projects</a>
-          <a className="text-sm font-medium text-white/70 hover:text-white px-2 py-1 rounded" href="#about">About</a>
-          <a className="text-sm font-medium text-white/70 hover:text-white px-2 py-1 rounded" href="#contact">Contact</a>
-        </nav>
+        <div className="flex items-center gap-4">
+          <nav aria-label="Main navigation" className="hidden md:flex gap-1 items-center">
+            <a className="text-sm px-3 py-2 rounded-md hover:bg-accent transition-colors" href="#home">Home</a>
+            <a className="text-sm px-3 py-2 rounded-md hover:bg-accent transition-colors" href="#projects">Projects</a>
+            <a className="text-sm px-3 py-2 rounded-md hover:bg-accent transition-colors" href="#about">About</a>
+            <a className="text-sm px-3 py-2 rounded-md hover:bg-accent transition-colors" href="#contact">Contact</a>
+          </nav>
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   )

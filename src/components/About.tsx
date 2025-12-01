@@ -1,34 +1,46 @@
-// (no runtime import needed - using JSX transform)
-
 export default function About() {
   return (
-    <section id="about" className="max-w-[1100px] mx-auto px-4 py-12">
-      <h2 className="text-2xl font-semibold">About me</h2>
-      <div className="mt-6 grid gap-6 md:grid-cols-2 items-start">
-        <div className="text-white/90 space-y-4">
+    <section id="about" className="max-w-4xl mx-auto px-6">
+      <h2>About</h2>
+      <div className="grid gap-12 md:grid-cols-2 items-start">
+        <div className="space-y-4">
           <p>
-            Hi, I'm Adarsh Liju Abraham—a backend engineer and systems developer passionate about building robust, scalable, and high-performance solutions. My expertise spans computer science fundamentals, distributed systems, and automation.
+            I'm a System Engineer and Backend Developer passionate about building robust, scalable, and high-performance solutions. 
+            My expertise spans computer science fundamentals, distributed systems, and automation.
           </p>
           <p>
-            At Twospoon Technologies, I architect and develop microservices, design scalable Flask/Django systems, and automate infrastructure. My work includes SNMP-based monitoring, backend performance optimization, and secure, production-grade deployments. I focus on creating systems that are fast, stable, observable, and maintainable.
+            At <strong>Twospoon Technologies</strong> (Oct'24 - Present), I architect and develop microservices, design scalable Flask/Django systems, 
+            and automate infrastructure. I've developed Flask-based APIs handling 100K+ daily requests, reduced deployment time by 40%, 
+            and implemented SNMP-based monitoring systems maintaining 99.9% uptime.
           </p>
           <p>
-            Previously at Caliper Business, I engineered high-volume data processing pipelines, analytics-driven APIs, and automation workflows—reducing manual effort and boosting performance for multiple clients.
+            Previously at <strong>Caliper Business</strong> (May'24 - Oct'24), I engineered high-volume data processing pipelines, 
+            analytics-driven APIs processing 1M+ records daily, and automation workflows—reducing manual processing time by 70% 
+            and API response time by 60%.
           </p>
           <p>
-            My academic journey at PES University deepened my skills in Linux, system programming, distributed systems, and RISC-V research. I've published research in Springer and IEEE on SDN architectures, network optimization, and disaster-response systems. I actively contribute to open-source, lead workshops on Linux, Git, and Golang, and enjoy designing tools and automation workflows.
-          </p>
-          <p>
-            I thrive at the intersection of systems engineering, backend development, and DevOps—solving complex technical challenges and driving reliability, scalability, and efficiency. I enjoy mentoring, exploring new technologies, and continuously improving the systems I build.
+            I hold a B.Tech in Computer Science from PES University (May'24) and have published research in Springer and IEEE 
+            on SDN architectures and network optimization. I actively contribute to open-source and lead workshops on Linux, Git, and Golang.
           </p>
         </div>
 
-        <ul className="space-y-2 text-sm text-white/70" aria-label="Skills">
-          <li>React & TypeScript</li>
-          <li>Responsive & Accessible UI</li>
-          <li>Testing & Tooling</li>
-          <li>Performance optimizations</li>
-        </ul>
+        <div className="border border-border rounded-xl bg-card p-6">
+          <h3 className="mb-6 font-semibold">Technical Skills</h3>
+          <div className="space-y-4 text-sm">
+            <div>
+              <div className="font-medium mb-2">Languages</div>
+              <div className="text-muted-foreground">JavaScript, Python, C, C++, PHP, Shell (Bash), MySQL, Golang</div>
+            </div>
+            <div>
+              <div className="font-medium mb-2">Systems</div>
+              <div className="text-muted-foreground">Linux, SQL, Docker, Kernel Programming</div>
+            </div>
+            <div>
+              <div className="font-medium mb-2">Frameworks & Tools</div>
+              <div className="text-muted-foreground">Django, ReactJS, Flask, Git, AWS, Pandas, SNMP, OpenMP, MPI</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   )

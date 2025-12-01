@@ -7,15 +7,15 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 }
 
 export default function Button({ className = '', href, variant = 'default', size = 'default', children, ...props }: ButtonProps & any) {
-  const base = 'inline-flex items-center justify-center rounded-md text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2'
+  const base = 'inline-flex items-center justify-center rounded-lg text-sm font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2'
 
   const variantClass = variant === 'primary'
-    ? 'bg-gradient-to-r from-[#646cff] to-[#4ab3ff] text-black shadow-sm'
+    ? 'bg-foreground text-background hover:opacity-90'
     : variant === 'outline'
-      ? 'bg-transparent border border-white/10 text-white'
-      : 'bg-white/5 border border-white/5 text-white'
+      ? 'bg-transparent border border-border hover:bg-accent'
+      : 'bg-accent hover:bg-accent/80'
 
-  const sizeClass = size === 'sm' ? 'h-8 px-3 text-sm' : size === 'lg' ? 'h-12 px-6' : 'h-10 px-4'
+  const sizeClass = size === 'sm' ? 'h-9 px-4' : size === 'lg' ? 'h-12 px-8' : 'h-10 px-6'
 
   const cls = `${base} ${variantClass} ${sizeClass} ${className}`.trim()
 
@@ -32,4 +32,4 @@ export default function Button({ className = '', href, variant = 'default', size
   )
 }
 
-export default Button
+ 
