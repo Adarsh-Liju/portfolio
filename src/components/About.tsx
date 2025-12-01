@@ -1,9 +1,9 @@
 export default function About() {
   return (
-    <section id="about" className="max-w-4xl mx-auto px-6">
+    <section id="about" className="container">
       <h2>About</h2>
-      <div className="grid gap-12 md:grid-cols-2 items-start">
-        <div className="space-y-4">
+      <div className="about-grid">
+        <div className="about-text">
           <p>
             I'm a System Engineer and Backend Developer passionate about building robust, scalable, and high-performance solutions. 
             My expertise spans computer science fundamentals, distributed systems, and automation.
@@ -24,20 +24,20 @@ export default function About() {
           </p>
         </div>
 
-        <div className="border border-border rounded-xl bg-card p-6">
-          <h3 className="mb-6 font-semibold">Technical Skills</h3>
-          <div className="space-y-4 text-sm">
+        <div className="skills-card">
+          <h3>Technical Skills</h3>
+          <div className="skills-section">
             <div>
-              <div className="font-medium mb-2">Languages</div>
-              <div className="text-muted-foreground">JavaScript, Python, C, C++, PHP, Shell (Bash), MySQL, Golang</div>
+              <div className="skills-label">Languages</div>
+              <div className="skills-items">JavaScript, Python, C, C++, PHP, Shell (Bash), MySQL, Golang</div>
             </div>
             <div>
-              <div className="font-medium mb-2">Systems</div>
-              <div className="text-muted-foreground">Linux, SQL, Docker, Kernel Programming</div>
+              <div className="skills-label">Systems</div>
+              <div className="skills-items">Linux, SQL, Docker, Kernel Programming</div>
             </div>
             <div>
-              <div className="font-medium mb-2">Frameworks & Tools</div>
-              <div className="text-muted-foreground">Django, ReactJS, Flask, Git, AWS, Pandas, SNMP, OpenMP, MPI</div>
+              <div className="skills-label">Frameworks & Tools</div>
+              <div className="skills-items">Django, ReactJS, Flask, Git, AWS, Pandas, SNMP, OpenMP, MPI</div>
             </div>
           </div>
         </div>

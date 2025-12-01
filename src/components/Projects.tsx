@@ -31,27 +31,27 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="max-w-4xl mx-auto px-6">
+    <section id="projects" className="container">
       <h2>Projects</h2>
 
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="projects-grid">
         {projects.map((p) => (
-          <article key={p.title} className="border border-border rounded-xl bg-card p-6 hover-lift">
-            <div className="mb-4">
-              <h3 className="text-lg font-semibold mb-2">{p.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-2">{p.description}</p>
-              <p className="text-xs text-muted-foreground italic">{p.highlight}</p>
+          <article key={p.title} className="project-card">
+            <div>
+              <h3 className="project-title">{p.title}</h3>
+              <p className="project-desc">{p.description}</p>
+              <p className="project-highlight">{p.highlight}</p>
             </div>
             
-            <div className="flex flex-wrap gap-2 mb-3">
+            <div className="project-tech">
               {p.tech.map((tech) => (
-                <span key={tech} className="text-xs px-2 py-1 rounded-md bg-muted text-muted-foreground">
+                <span key={tech} className="tech-badge">
                   {tech}
                 </span>
               ))}
             </div>
             
-            <div className="text-xs text-muted-foreground">
+            <div className="project-team">
               {p.team}
             </div>
           </article>
