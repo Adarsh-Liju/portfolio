@@ -1,0 +1,157 @@
+Adarsh Liju Abraham
+Ph: +91 8088229177 ; E-mail: adarsh.liju.abraham@gmail.com
+
+ACADEMIC QUALIFICATION
+Bachelor of Technology in Computer Science Engineering, PES University (PESU); May’24
+
+WORK EXPERIENCE
+System Engineer, Twospoon Technologies, Bengaluru​
+​
+​
+​
+​
+Oct’24 - Present
+Twospoon is a growing technology services company that focuses on building reliable, scalable, and modern
+solutions for businesses across different domains.
+●​ Developed highly scalable Flask-based APIs handling 100K+ daily requests for a ReactJS frontend
+●​ Architected and implemented microservices reducing deployment time by 40%
+●​ Designed and implemented SNMP-based network monitoring systems integrated with Grafana/Prometheus and
+Checkmk, maintaining 99.9% uptime across critical services and infrastructure
+●​ Implemented comprehensive automation solutions reducing manual operations by 80%.
+●​ Built a lot of industry automations for deployment of high-performance codebases and scripts and reduced
+manual intervention.
+●​ Built reusable deployment scripts and automation templates to standardize the rollout of high-performance
+codebases, improving deployment speed and consistency across projects
+●​ Collaborated cross-functionally with frontend and product teams to align infrastructure improvements with
+business goals, improving overall system responsiveness by 30%
+●​ Conducted regular performance tuning and profiling of backend APIs, reducing average API response times by
+over 200ms under peak load
+●​ Documented infrastructure and workflows thoroughly, enabling faster onboarding of new engineers and better
+incident response
+●​ Ensured production systems adhered to security best practices, including API authentication, log auditing, and
+patch management
+Python Engineer, Caliper Business Pvt. Ltd, Bengaluru​
+​
+​
+Supply chain startup giving tech services an products to FMCG companies
+●​
+●​
+●​
+●​
+●​
+
+​
+
+​
+
+May’24 – Oct’24
+
+Developed and maintained REST APIs using Django and Django REST Framework
+Built scalable Pandas-based APIs processing 1M+ records daily for data analytics
+Automated complex Excel workflows, reducing manual processing time by 70%
+Optimized backend performance, reducing API response time by 60%
+Scaled existing projects to support 5 new enterprise clients
+
+INTERNSHIPS
+Developer & Analytics Intern, Caliper Business Pvt. Ltd, Bengaluru​​
+​
+​
+Feb’24 - May’24
+●​ Developed backend infrastructure for a planner application using Django, reducing response time by 40%
+●​ Designed an intuitive frontend interface with ReactJS, improving user engagement by 25%
+●​ Integrated AI models for demand prediction, achieving 85% accuracy in forecasting and supply chain analytics
+●​ Worked on Demand Forecasting and Warehouse Business Analytics
+SME Lecturer, PESUIO, Bengaluru​
+​
+​
+​
+​
+​​
+Jun’22 - Sep’23
+●​ Taught Linux fundamentals and command-line tools to 20+ students with 90% course completion rate
+●​ Conducted hands-on sessions on basics of Linux and Shell scripts, Kernel modules and system programming
+●​ Led discussions on FOSS principles and Linux system concepts, fostering a learning community
+Research Intern, CHIPS, Bengaluru​
+​
+​
+​
+Research into deep tech and server related hardware optimizations
+
+​
+
+​
+
+​
+
+May’22 - Jul’22
+
+●​ Conducted research on Manycore RISC-V architecture, focusing on parallel computing optimization
+
+●​ Evaluated various RISC-V architectures to identify optimal design features for high-performance computing
+●​ Benchmarked OpenMP and MPI implementations to derive performance insights
+
+ACADEMIC PROJECTS
+Title: Project Turtle
+Team size: 2
+Summary: Developed a shell script for streamlined installation of essential tools on Linux systems. Implemented
+error handling and rigorous compatibility testing across multiple distributions. This project was part of hacktoberfest
+and more people contributed to the code. It was used to bootstrap a lot of tools on Linux servers and workstations.
+Title: Yet Another Markdown Converter
+Team size: 1
+Description: Designed a Command Line Interface(CLI) tool to convert Markdown files to plain HTML. This
+versatile tool not only facilitates the conversion of Markdown-formatted documents into HTML but also offers
+additional theming and styling options. Users can customize the appearance of the HTML output generated
+according to their preferences, enhancing the visual presentation of the content. The CLI nature of the tool ensures
+ease of use in a terminal environment, providing users with a flexible and automated solution for Markdown to
+HTML conversion.
+Title: DoctorPres
+Team size: 1
+Description: Developed a Doctor Prescription System to replace handwritten prescriptions with a digital solution.
+The dataset for medicines and diseases utilized in this research was sourced from an official Indian Government
+website. It utilizes Streamlit for a user-friendly interface and a MySQL database for robust data storage. The system
+allows doctors to electronically issue and manage patient prescriptions and bills. Key database tables include
+information on doctors, patients, medicines, and billing. It incorporates advanced database features like triggers for
+data validation and procedures for complex queries. The project aims to create a fast, responsive, and scalable digital
+prescription platform.
+Title: Capstone Project (Final Year Project)
+Team size: 4
+Summary: Created a secure platform for Dapps by integrating a blockchain, establishing a decentralized, tamper
+resistant system enhancing network security. An ONOS controller cluster was created to eradicate the single point of
+failure. Rigorous evaluation will gauge performance, security, scalability, highlighting blockchain’s potential in
+addressing security challenges.
+SDN offers flexibility and programmability but lacks in providing robust application security
+
+PUBLICATIONS
+●​ ONOS SDN Framework: Assessing the Impact of Single and Multi-Controller Architectures on Network
+Efficiency, Published at SmartCom 2024 (Springer)
+o​ Assessed SDN-integrated alarm systems using Cooja simulations to improve disaster response
+efficiency.
+o​ Compared RPL and SDN protocols, proposing solutions for IoT network challenges.
+●​ Enhancing Disaster Response: A Study on SDN-Integrated Alarm and Alert Systems Using Cooja
+Simulations, Published at NKCON 2023 (IEEE)
+o​ Analyzed ONOS and Mininet in SDN, comparing single-controller and multi-controller architectures.
+o​ Evaluated performance metrics like latency, throughput, scalability, and fault tolerance.
+
+WORKSHOPS
+●​ Conducted a workshop on ‘Linux, Git and Open-Source Contribution’ for Hackerspace Club, held at PES
+University, Jan 2023
+●​ Conducted a Golang workshop for Hackerspace Club, held at PES University, Feb 2023
+
+TECHNICAL SKILLS
+●​
+●​
+●​
+●​
+
+Languages: JavaScript, Python, C, C++, PHP, Shell (Bash), MySQL, Golang (Basics)
+Systems: Linux, SQL, Docker, Kernel Programming
+Computer Fundamentals: DBMS, Operating Systems, OOPS, Web Development
+Frameworks & Tools: Django, ReactJS, Git, AWS, Flask, Pandas, Unix/Linux Tools, OpenMP, MPI, SNMP
+
+EXTRACURRICULAR ACTIVITIES & ACHIEVEMENTS
+●​ Mentored aspiring students as a key figure in the HackerSpace Club, arranging numerous hackathons and
+providing guidance to foster innovative projects and skill development.
+●​ Attended many FOSS club presentations and hackathons as part of my hobby
+●​ Led a capstone project, managing timelines and fostering collaboration for successful implementation.
+
+
