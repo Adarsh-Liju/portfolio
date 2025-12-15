@@ -1,0 +1,22 @@
+{
+  "apps": [
+    {
+      "name": "ala-portfolio-app",
+      "instances": 1,
+      "script": "bun",
+      "args": "run preview -- --host 0.0.0.0 --port 3000",
+      "exec_mode": "fork",
+      "autorestart": true,
+      "watch": false,
+      "max_restarts": 10,
+      "error_file": "./logs/app-err.log",
+      "out_file": "./logs/app-out.log",
+      "log_date_format": "YYYY-MM-DD HH:mm Z",
+      "env": {
+        "NODE_ENV": "production",
+        "PORT": "3000",
+        "HOST": "0.0.0.0"
+      }
+    }
+  ]
+}

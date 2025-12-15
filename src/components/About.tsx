@@ -19,6 +19,10 @@ export default function About() {
             and API response time by 60%.
           </p>
           <p>
+            During my internships, I developed backend infrastructure for a planner application using Django, designed ReactJS frontends, 
+            integrated AI models for demand prediction, taught Linux fundamentals to students, and conducted research on RISC-V architectures.
+          </p>
+          <p>
             I hold a B.Tech in Computer Science from PES University (May'24) and have published research in Springer and IEEE 
             on SDN architectures and network optimization. I actively contribute to open-source and lead workshops on Linux, Git, and Golang.
           </p>

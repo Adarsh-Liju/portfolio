@@ -1,28 +1,28 @@
 const projects = [
   {
     title: 'Project Turtle',
-    description: 'Streamlined shell script for installing essential tools on Linux systems.',
+    description: 'Developed a shell script for streamlined installation of essential tools on Linux systems. Implemented error handling and rigorous compatibility testing across multiple distributions.',
     highlight: 'Part of Hacktoberfest • Used to bootstrap tools on servers and workstations',
     team: 'Team of 2',
     tech: ['Shell Scripting', 'Linux', 'Bash']
   },
   {
     title: 'Yet Another Markdown Converter',
-    description: 'CLI tool for converting Markdown to HTML with customizable theming.',
+    description: 'Designed a Command Line Interface(CLI) tool to convert Markdown files to plain HTML. Offers additional theming and styling options for customizable appearance.',
     highlight: 'Flexible and automated solution for document conversion',
     team: 'Solo project',
     tech: ['CLI', 'Markdown', 'HTML']
   },
   {
     title: 'DoctorPres',
-    description: 'Digital prescription system replacing handwritten prescriptions.',
+    description: 'Developed a Doctor Prescription System to replace handwritten prescriptions with a digital solution. Utilizes Streamlit for interface and MySQL for data storage.',
     highlight: 'Database triggers for validation • Stored procedures for complex queries',
     team: 'Solo project',
     tech: ['Streamlit', 'MySQL', 'Python']
   },
   {
     title: 'Secure Dapps Platform',
-    description: 'Blockchain-integrated platform for decentralized applications.',
+    description: 'Created a secure platform for Dapps by integrating a blockchain, establishing a decentralized, tamper-resistant system enhancing network security.',
     highlight: 'ONOS controller cluster eliminates single point of failure',
     team: 'Team of 4',
     tech: ['Blockchain', 'SDN', 'ONOS']

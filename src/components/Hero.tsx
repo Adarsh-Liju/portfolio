@@ -10,7 +10,7 @@ export default function Hero() {
             System Engineer & Backend Developer building scalable, high-performance solutions.
           </p>
           <p>
-            Currently at Twospoon Technologies, I architect microservices, design Flask/Django systems, 
+            Currently at Twospoon Technologies, I architect microservices, design systems, 
             and automate infrastructure—handling 100K+ daily requests with 99.9% uptime.
           </p>
 
